@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest20Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Prowin.com/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    body{
+        overflow-x: hidden;
+    }
+</style>
+<body>
+
+
+        <button class="back-btn"><a href="/Prowin.com/index.html"><i class="fa-solid fa-chevron-left"></i></a></button>
+        <div class="contest">
+            <h3 id="contest-1">SURVIVAL BOOYHA! CONTEST.1</h3>
+            <div class="winning-zone">
+                <h4 id="win-zone-text">WINNING ZONE !</h4>
+                <div class="winner">
+                    <p class="win-player">#1.BOOYHA</p>
+                    <span class="win-price">=₹25</span>
+                    <i class="fa-solid fa-trophy"  id="contest-trophy"></i>
+                </div>
+                <div class="winner">
+                    <p class="win-player">#2.TOP</p>
+                    <span class="win-price">=₹15</span>
+                    <i class="fa-solid fa-trophy"  id="contest-trophy"></i>
+                </div>
+                <div class="winner">
+                    <p class="win-player">#3.TOP</p>
+                    <span class="win-price">=₹10</span>
+                    <i class="fa-solid fa-trophy"  id="contest-trophy"></i>
+                </div>
+                <button class="entry-btn" onclick="openForm()">Entry=₹5</button>
+            </div>
+            <p class="tip">This Contest Will Be <strong>20 Players..</strong>Play Game classic Bermuda & Earn Rewards.</p>
+        </div>
+        <!-- contest2 -->
+        <div class="contest">
+            <h3 id="contest-1">SURVIVAL BOOYHA! CONTEST.2</h3>
+            <div class="winning-zone">
+                <h4 id="win-zone-text">WINNING ZONE !</h4>
+                <div class="winner">
+                    <p class="win-player">#1.BOOYHA</p>
+                    <span class="win-price">=₹60</span>
+                    <i class="fa-solid fa-trophy"  id="contest-trophy"></i>
+                </div>
+                <div class="winner">
+                    <p class="win-player">#2.TOP</p>
+                    <span class="win-price">=₹40</span>
+                    <i class="fa-solid fa-trophy"  id="contest-trophy"></i>
+                </div>
+                <div class="winner">
+                    <p class="win-player">#3.TOP</p>
+                    <span class="win-price">=₹25</span>
+                    <i class="fa-solid fa-trophy"  id="contest-trophy"></i>
+                </div>
+                <button class="entry-btn" onclick="openForm()">Entry=₹10</button>
+            </div>
+            <p class="tip">This Contest Will Be <strong>20 Players..</strong>Play Game classic Bermuda & Earn Rewards.</p>
+        </div>
+    </div>
+<!-- Contest Form -->
+    <div class="first-contest-form">
+        <i class="fa-solid fa-square-xmark" onclick="closeForm()"></i>
+        <div class="game-rule">
+            <h1 id="prowin-form-heading"> Prowin..GAME RULES.</h1>
+            <div class="game-setting">
+                <ul>
+                    <li>Game mode:Classic-Bermuda</li>
+                    <li>Players:-20</li>
+                    <li>Team Mode:-Solo</li>
+                    <li>Limited:-Ammo</li>
+                    <li>All Guns:-USE</li>
+                    <li>Character Skill:-On</li>
+                    <li>All Character:-USE</li>
+                    <li>Spectators:2</li>
+                </ul><br>
+                <div class="notes">
+                    <div class="imp-notes">
+                        <p>NOTES:- 👉रूम मध्ये असताना  आपल्या व्यतिरिक्त दुसर्या प्लेयर ला रिक्वेस्ट टाकल्यास रूम मधून Remove केले जाईल  पैसे गेल्यास  तुम्ही जबाबदार राहणार</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="https://formspree.io/f/mkndpqgq" method="post" onsubmit="return validiation()">
+            <div class="input-field">
+                <input type="text" placeholder="+91" required  id="phone" name="phone">
+                <p class="error-msg"></p>
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="Enter Your Email" required  id="email" name="email">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Enter Your Name" required  id="name" name="name">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="@Game Id" required id="game-id" name="game-id" >
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Game Name" required  id="game-name" name="game-name">
+            </div>
+            <div class="input-field">
+               <input type="text" placeholder="Choose Contest" id="choosing">
+                <select name="contest" id="contest" value="Your Contest" id="selecter">
+                    <option value="contest2" name="contest1">CONTEST #1</option>
+                    <option value="contest2" name="'contest2">CONTEST #2</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <input type="checkbox"  id="check-box" required><span id="alert-text"> पेंमेट करुन तुमचा गेम आ.य.डी खात्री करून घ्या बटन क्लिक करताना</span>
+            </div>
+            <div class="input-field">
+                <input type="submit" value="Room Book" id="room-btn">
+            </div>
+        </form>
+     <div class="modal">
+
+            <p>खाली  दिलेला QR  Download करा</p>
+            <div class="payment-section">
+                <div class="Q-r"><a href="/Prowin.com/UsserAssets/KaranQR.jpeg" download="KaranQR">Download QR</a></div>
+                <p>तूम्ही पेमेंट केलेला Screenshot  टाका</p>
+                <button class="share-btn"><a href="https://wa.me/917083569518">Share <i class="fa-brands fa-whatsapp" id="watsapp-logo"></i></a></button>
+            </div>
+        
+    </div>
+
+    <script src="/Prowin.com/index.js"></script>
+</body>
+</html>
